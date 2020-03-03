@@ -465,6 +465,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890430879}
   m_CullTransparentMesh: 0
+--- !u!1 &904635872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1012244767882954891, guid: d2da3387d929d7b4299491f41ede955c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2709829857885230709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &904635873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904635872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a5841c211011a479c6b95e784cf8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smokePrefab: {fileID: 4080730899042787617, guid: a30674ad97c8c2349a9ef6431a8b6619,
+    type: 3}
+  timeBetweenShots: 5
+  canShoot: 0
 --- !u!1 &1139136440
 GameObject:
   m_ObjectHideFlags: 0
