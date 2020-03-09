@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 211686537}
   - component: {fileID: 211686538}
   - component: {fileID: 211686539}
+  - component: {fileID: 211686540}
   m_Layer: 5
   m_Name: Panel ChatBox
   m_TagString: Untagged
@@ -276,10 +277,10 @@ RectTransform:
   m_Father: {fileID: 135877204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 33.904984}
-  m_SizeDelta: {x: 0, y: -67.79}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 25.5}
+  m_SizeDelta: {x: -9.01001, y: 205.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &211686538
 CanvasRenderer:
@@ -302,18 +303,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
+--- !u!114 &211686540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211686536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
+--- !u!1 &376605648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8512824701911993052, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135555493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &623324069
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +499,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904635872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75a5841c211011a479c6b95e784cf8e6, type: 3}
   m_Name: 
@@ -543,6 +564,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3a5914cb825c84ea638b8963892639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chatPrefab: {fileID: 0}
+  chatBar: {fileID: 376605648}
+  chatHolder: {fileID: 0}
+  chatList: []
+  maxLenght: 10
+  maxWidth: 10
 --- !u!1 &1346733305
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +720,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375006561}
   m_CullTransparentMesh: 0
+--- !u!114 &1643624388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5955169083538158011, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135555493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1846115874
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1037,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 135877204}
     m_Modifications:
+    - target: {fileID: 2727199094473717656, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727199094473717656, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
+        type: 3}
+      propertyPath: m_Placeholder
+      value: 
+      objectReference: {fileID: 1643624388}
     - target: {fileID: 4354851466715493528, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1111,7 +1160,12 @@ PrefabInstance:
     - target: {fileID: 4354851466715493531, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955169083538158011, guid: 79b0a64b076ae1e43bc07f5823ad6e9e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79b0a64b076ae1e43bc07f5823ad6e9e, type: 3}

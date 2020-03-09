@@ -6,12 +6,15 @@ namespace GameServer
 {
     public class ClientSend : MonoBehaviour
     {
+
         #region TCP
-        
+
         private static void SendTCPData(Packet _Packet)
         {
-            _Packet.WriteLength();
-            Client.instance.tcp.SendData(_Packet);
+            {
+                _Packet.WriteLength();
+                Client.instance.tcp.SendData(_Packet);
+            }
         }
 
         #endregion
@@ -22,6 +25,16 @@ namespace GameServer
         {
             using (Packet _Packet = new Packet((int)ClientPackets.playerIsLoaded))
             {
+                SendTCPData(_Packet);
+            }
+        }
+
+        public static void Chat(string message)
+        {
+            using (Packet _Packet = new Packet((int)ClientPackets.chat))
+            {
+                _Packet.Write(message);
+
                 SendTCPData(_Packet);
             }
         }
@@ -52,5 +65,6 @@ namespace GameServer
         }
 
         #endregion
+        
     }
 }

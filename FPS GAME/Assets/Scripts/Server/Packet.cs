@@ -17,7 +17,8 @@ namespace GameServer
     public enum ClientPackets
     {
         playerIsLoaded = 1,
-        playerMovement = 2
+        playerMovement = 2,
+        chat = 3
     }
 
     public class Packet : IDisposable
