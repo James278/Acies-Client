@@ -108,6 +108,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8342267968173847081, guid: 59991ae2d642b0b468194c6bd621cd06,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 264.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342267968173847081, guid: 59991ae2d642b0b468194c6bd621cd06,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 8342267968173847083, guid: 59991ae2d642b0b468194c6bd621cd06,
         type: 3}
       propertyPath: m_Name
@@ -128,6 +138,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 499100004591684761}
     m_Modifications:
+    - target: {fileID: 6615261236229824144, guid: d190cf091582d094d8b358e521c5e8cc,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 23.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615261236229824144, guid: d190cf091582d094d8b358e521c5e8cc,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6615261236229824145, guid: d190cf091582d094d8b358e521c5e8cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,6 +287,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250707243829451695, guid: d0357cd32654fd44f8224674551220c3,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250707243829451695, guid: d0357cd32654fd44f8224674551220c3,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250707243829451695, guid: d0357cd32654fd44f8224674551220c3,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0357cd32654fd44f8224674551220c3, type: 3}
